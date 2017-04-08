@@ -3,6 +3,16 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
-export const environment = {
-  production: false
+import { AppConfig } from '../app/model/model';
+
+const baseGhostUrl=  'http://localhost:2368';
+
+export const environment: AppConfig = {
+  production: false,
+  api: {
+    baseUrl: `${baseGhostUrl}/ghost/api/v0.1`,
+    clientId: 'ghost-frontend',
+    clientSecret: 'c9c2bbd9c8d7'
+  },
+  imageBaseUrl : baseGhostUrl
 };
