@@ -1,0 +1,9 @@
+@import "../../../sass/main";
+
+article {
+  @include fadeIn;
+}
+
+details img {
+  width: 50vw;
+}

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -10,6 +10,7 @@ import { ROUTES } from './app.routes';
 import { RouterModule } from '@angular/router';
 import { PostsComponent } from './components/posts/posts.component';
 import { InfiniteScrollModule } from 'angular2-infinite-scroll';
+import { HeaderComponent } from './components/header/header.component';
 
 export function initRestangular(RestangularProvider) {
   RestangularProvider.setBaseUrl(environment.api.baseUrl);
@@ -18,7 +19,8 @@ export function initRestangular(RestangularProvider) {
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent
+    PostsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,9 @@ export function initRestangular(RestangularProvider) {
     RestangularModule.forRoot(initRestangular),
     InfiniteScrollModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr-FR' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

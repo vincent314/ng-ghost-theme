@@ -1,11 +1,10 @@
 <div infinite-scroll
      (scrolled)="onScroll()">
 
-  <div *ngFor="let post of posts">
-    <h3>~~~~~ {{post.title}}</h3>
+  <article *ngFor="let post of posts">
+    <h1>{{post.title}}</h1>
 
-    <p>Published {{post.published_at | date}}</p>
-    <div [innerHTML]="post.safeHtml"></div>
-
-  </div>
+    <p>Publié {{post.published_at | date:'fullDate'}}</p>
+    <details open [innerHTML]="post.safeHtml"></details>
+  </article>
 </div>

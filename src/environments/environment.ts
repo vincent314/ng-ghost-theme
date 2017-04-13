@@ -8,6 +8,7 @@ import { AppConfig } from '../app/model/model';
 const baseGhostUrl=  'http://localhost:2368';
 
 export const environment: AppConfig = {
+  title: 'Doux-Amer',
   production: false,
   api: {
     baseUrl: `${baseGhostUrl}/ghost/api/v0.1`,

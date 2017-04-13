@@ -23,7 +23,7 @@ export class GhostService {
   getPosts(page:number): Observable<Post[]> {
     return this.api.one('posts').get(
       Object.assign({
-        fields: 'id,uuid,slug,title,html,markdown,published_at',
+        fields: 'id,uuid,slug,title,html,markdown,published_at,image,url',
         filters: 'status:published',
         limit: 10,
         page: page

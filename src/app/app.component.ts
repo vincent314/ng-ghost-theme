@@ -5,7 +5,7 @@ import { GhostService } from './services/ghost.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   providers: [GhostService],
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
 

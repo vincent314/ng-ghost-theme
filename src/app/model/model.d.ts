@@ -5,6 +5,7 @@ export interface ApiConfig {
 }
 
 export interface AppConfig {
+  title:string;
   production: boolean;
   api: ApiConfig;
   imageBaseUrl: string;

@@ -5,4 +5,6 @@ export interface Post {
   markdown?:string;
   html?: string;
   safeHtml?: SafeHtml;
+  image?:string;
+  url?:string;
 }
